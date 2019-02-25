@@ -12,7 +12,7 @@ class WelcomeController: UIViewController {
 
     let bg:UIView = {
         let view = GDGradient()
-        view.layer.cornerRadius = 6
+        view.layer.cornerRadius = 24
         return view
     }()
     
@@ -24,8 +24,26 @@ class WelcomeController: UIViewController {
         return label
     }()
     
+    let nextButton = GDButton(title: "START WINNING")
+    
+    let copyright = GDLabel(title: "© 2019 Erscheinung", color: .grayOne, size: 14, textAlign: .center)
+    
+    @objc func handleNext() {
+        UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+            self.nextButton.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
+        }) { (_) in
+            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+                self.nextButton.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }) { (_) in
+                self.present(ListController(), animated: true, completion: nil)
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nextButton.addTarget(self, action: #selector(self.handleNext), for: [.touchUpInside, .touchUpOutside])
         
         view.backgroundColor = .white
 //        titleLabel.text = "GET IT DONE"
@@ -49,7 +67,19 @@ class WelcomeController: UIViewController {
         infoLabel.widthAnchor.constraint(equalToConstant: 300).isActive = true
         infoLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
+        bg.addSubview(nextButton)
+        nextButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        nextButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        nextButton.centerXAnchor.constraint(equalTo: bg.centerXAnchor).isActive = true
+        nextButton.bottomAnchor.constraint(equalTo: bg.bottomAnchor, constant: -60).isActive = true
+        
+        view.addSubview(copyright)
+        copyright.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        copyright.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        copyright.centerXAnchor.constraint(equalTo: bg.centerXAnchor).isActive = true
+        copyright.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20).isActive = true
     }
+    
 
 }
 

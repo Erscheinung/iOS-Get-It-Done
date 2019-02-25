@@ -14,6 +14,8 @@
 		2A68190122184CE000197B8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6818FF22184CE000197B8D /* LaunchScreen.storyboard */; };
 		2A9D6104221CDB4C0032E2B6 /* GDLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D6103221CDB4C0032E2B6 /* GDLabel.swift */; };
 		2ADBB48822218BF10049583C /* Raleway-v4020-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2ADBB48722218BF10049583C /* Raleway-v4020-Regular.otf */; };
+		2AE0686322240B640022C243 /* GDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE0686222240B640022C243 /* GDButton.swift */; };
+		2AE06865222412200022C243 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE06864222412200022C243 /* ListController.swift */; };
 		2AE4643C221AE371004CB539 /* GDGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4643B221AE371004CB539 /* GDGradient.swift */; };
 		2AE4643F221AE652004CB539 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4643E221AE652004CB539 /* extension.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +30,8 @@
 		2A68190222184CE000197B8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A9D6103221CDB4C0032E2B6 /* GDLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDLabel.swift; sourceTree = "<group>"; };
 		2ADBB48722218BF10049583C /* Raleway-v4020-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-v4020-Regular.otf"; sourceTree = "<group>"; };
+		2AE0686222240B640022C243 /* GDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDButton.swift; sourceTree = "<group>"; };
+		2AE06864222412200022C243 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		2AE4643B221AE371004CB539 /* GDGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDGradient.swift; sourceTree = "<group>"; };
 		2AE4643E221AE652004CB539 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +82,7 @@
 				2A6818FF22184CE000197B8D /* LaunchScreen.storyboard */,
 				2A68190222184CE000197B8D /* Info.plist */,
 				2A6818FA22184CDE00197B8D /* GetItDone.xcdatamodeld */,
+				2AE06864222412200022C243 /* ListController.swift */,
 			);
 			path = GetItDone;
 			sourceTree = "<group>";
@@ -88,6 +93,7 @@
 				2ADBB48722218BF10049583C /* Raleway-v4020-Regular.otf */,
 				2AE4643B221AE371004CB539 /* GDGradient.swift */,
 				2A9D6103221CDB4C0032E2B6 /* GDLabel.swift */,
+				2AE0686222240B640022C243 /* GDButton.swift */,
 			);
 			path = custom;
 			sourceTree = "<group>";
@@ -172,11 +178,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AE4643C221AE371004CB539 /* GDGradient.swift in Sources */,
+				2AE0686322240B640022C243 /* GDButton.swift in Sources */,
 				2A9D6104221CDB4C0032E2B6 /* GDLabel.swift in Sources */,
 				2A6818F622184CDE00197B8D /* WelcomeController.swift in Sources */,
 				2A6818FC22184CDE00197B8D /* GetItDone.xcdatamodeld in Sources */,
 				2AE4643F221AE652004CB539 /* extension.swift in Sources */,
 				2A6818F422184CDE00197B8D /* AppDelegate.swift in Sources */,
+				2AE06865222412200022C243 /* ListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
