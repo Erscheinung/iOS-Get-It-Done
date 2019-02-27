@@ -24,7 +24,7 @@ class WelcomeController: UIViewController {
         return label
     }()
     
-    let nextButton = GDButton(title: "START WINNING")
+    let nextButton = GDButton(title: "START WINNING", type: .roundedText)
     
     let copyright = GDLabel(title: "© 2019 Erscheinung", color: .grayOne, size: 14, textAlign: .center)
     

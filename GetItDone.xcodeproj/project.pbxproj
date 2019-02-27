@@ -15,6 +15,7 @@
 		2A9D6104221CDB4C0032E2B6 /* GDLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D6103221CDB4C0032E2B6 /* GDLabel.swift */; };
 		2A9F4DDD2225605700916B8F /* GDHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9F4DDC2225605700916B8F /* GDHeader.swift */; };
 		2ADBB48822218BF10049583C /* Raleway-v4020-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2ADBB48722218BF10049583C /* Raleway-v4020-Regular.otf */; };
+		2ADD802F22262BFA00236647 /* optionset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD802E22262BFA00236647 /* optionset.swift */; };
 		2AE0686322240B640022C243 /* GDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE0686222240B640022C243 /* GDButton.swift */; };
 		2AE06865222412200022C243 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE06864222412200022C243 /* ListController.swift */; };
 		2AE4643C221AE371004CB539 /* GDGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4643B221AE371004CB539 /* GDGradient.swift */; };
@@ -32,6 +33,7 @@
 		2A9D6103221CDB4C0032E2B6 /* GDLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDLabel.swift; sourceTree = "<group>"; };
 		2A9F4DDC2225605700916B8F /* GDHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDHeader.swift; sourceTree = "<group>"; };
 		2ADBB48722218BF10049583C /* Raleway-v4020-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-v4020-Regular.otf"; sourceTree = "<group>"; };
+		2ADD802E22262BFA00236647 /* optionset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = optionset.swift; sourceTree = "<group>"; };
 		2AE0686222240B640022C243 /* GDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDButton.swift; sourceTree = "<group>"; };
 		2AE06864222412200022C243 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		2AE4643B221AE371004CB539 /* GDGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDGradient.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				2AE4643E221AE652004CB539 /* extension.swift */,
 				2A9F4DDC2225605700916B8F /* GDHeader.swift */,
+				2ADD802E22262BFA00236647 /* optionset.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				2A6818FC22184CDE00197B8D /* GetItDone.xcdatamodeld in Sources */,
 				2AE4643F221AE652004CB539 /* extension.swift in Sources */,
 				2A9F4DDD2225605700916B8F /* GDHeader.swift in Sources */,
+				2ADD802F22262BFA00236647 /* optionset.swift in Sources */,
 				2A6818F422184CDE00197B8D /* AppDelegate.swift in Sources */,
 				2AE06865222412200022C243 /* ListController.swift in Sources */,
 			);
