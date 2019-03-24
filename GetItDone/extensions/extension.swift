@@ -27,3 +27,11 @@ extension UIColor {
     }
     
 }
+
+extension UIView {
+    func checkIfAutoLayout() {
+        if frame == .zero {
+            translatesAutoresizingMaskIntoConstraints = false
+        }
+    }
+}
