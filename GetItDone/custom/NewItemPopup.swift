@@ -26,7 +26,7 @@ class NewItemPopup:GDGradient {
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         
-        let inset:CGFloat = 16
+        let inset:CGFloat = 12
         
         self.layer.cornerRadius = 14
         
@@ -44,7 +44,7 @@ class NewItemPopup:GDGradient {
         textField.leftAnchor.constraint(equalTo: leftAnchor, constant: inset).isActive = true
         textField.rightAnchor.constraint(equalTo: rightAnchor, constant: inset * -1).isActive = true
         textField.topAnchor.constraint(equalTo: add.bottomAnchor, constant: 8).isActive = true
-        textField.heightAnchor.constraint(equalToConstant: 32).isActive = true
+        textField.heightAnchor.constraint(equalToConstant: 28).isActive = true
         
         cancel.addTarget(self, action: #selector(self.handleCancel), for: .touchUpInside)
         add.addTarget(self, action: #selector(self.handleAdd), for: .touchUpInside)

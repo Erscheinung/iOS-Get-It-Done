@@ -11,11 +11,13 @@ import UIKit
 
 class GDTextField:UITextField {
     
-    init(frame:CGRect = .zero, placeholder:String = "placeholder") {
+    init(frame:CGRect = .zero, placeholder:String = "placeholder", radius:CGFloat = 4) {
         super.init(frame: frame)
         checkIfAutoLayout()
         
         self.placeholder = placeholder
+        self.backgroundColor = .white
+        self.layer.cornerRadius = radius 
     }
     
     required init?(coder aDecoder: NSCoder) {
