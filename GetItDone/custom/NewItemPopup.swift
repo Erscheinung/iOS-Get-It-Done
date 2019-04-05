@@ -13,7 +13,7 @@ class NewItemPopup:GDGradient {
     
     let cancel = GDButton(title: "  cancel  ", type: .roundedText, radius: 4)
     let add = GDButton(title: "  add  ", type: .roundedText, radius: 4)
-    let textField = GDTextField(placeholder: " LOLOLOLOL ")
+    let textField = GDTextField(placeholder: "LOLOLOLOL ", inset: 6)
     
     @objc func handleCancel() {
         print("Trying to handle cancel")
