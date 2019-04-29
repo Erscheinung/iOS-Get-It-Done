@@ -19,7 +19,7 @@ class ListController: UIViewController, GDHeaderDelegate {
     let header = GDHeaderView(title: "Stuff to get done", subtitle: "4 left")
     let popup = NewItemPopup()
     
-    var keyboardHeight:CGFloat = 0
+    var keyboardHeight:CGFloat = 333
     
     override func viewDidAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardDidShowNotification, object: nil)
@@ -29,10 +29,6 @@ class ListController: UIViewController, GDHeaderDelegate {
         let keyboardSize = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.size
         self.keyboardHeight = keyboardSize.height
 //        print(self.keyboardHeight)
-        
-        UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 0.85, initialSpringVelocity: 2, options: .curveEaseIn, animations: {
-                self.popup.transform = CGAffineTransform(translationX: 0, y: -self.keyboardHeight)
-        }, completion: nil)
     }
     
     
@@ -53,6 +49,16 @@ class ListController: UIViewController, GDHeaderDelegate {
         popup.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         popup.heightAnchor.constraint(equalToConstant: 80).isActive = true
         
+        popup.textField.delegate = self
+        
         header.delegate = self
+    }
+}
+
+extension ListController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.85, initialSpringVelocity: 2, options: .curveEaseIn, animations: {
+            self.popup.transform = CGAffineTransform(translationX: 0, y: -self.keyboardHeight)
+        }, completion: nil)
     }
 }
