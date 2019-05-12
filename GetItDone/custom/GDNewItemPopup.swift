@@ -17,7 +17,7 @@ class GDNewItemPopup:GDGradient {
     var delegate:GDNewItemDelegate?
     
     @objc func handleCancel() {
-        print("Trying to handle cancel")
+        textField.resignFirstResponder()
     }
     
     @objc func handleAdd() {

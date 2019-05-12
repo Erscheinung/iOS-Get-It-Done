@@ -34,4 +34,11 @@ extension UIView {
             translatesAutoresizingMaskIntoConstraints = false
         }
     }
+    
+    func animateView(transform:CGAffineTransform, duration:Double){
+        UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 0.85, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+            self.transform = transform
+            //     self.popup.transform = CGAffineTransform(translationX: 0, y: -self.keyboardHeight)
+        }, completion: nil)
+    }
 }
