@@ -9,18 +9,21 @@
 import Foundation
 import UIKit
 
-class NewItemPopup:GDGradient {
+class GDNewItemPopup:GDGradient {
     
     let cancel = GDButton(title: "  cancel  ", type: .roundedText, radius: 4)
     let add = GDButton(title: "  add  ", type: .roundedText, radius: 4)
     let textField = GDTextField(placeholder: "LOLOLOLOL ", inset: 6)
+    var delegate:GDNewItemDelegate?
     
     @objc func handleCancel() {
         print("Trying to handle cancel")
     }
     
     @objc func handleAdd() {
-        print("Trying to handle add")
+        if let delegate = self.delegate {
+            delegate.addItemToList()
+        }
     }
     
     override init(frame: CGRect = .zero) {

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A06A1C522479E6900F42895 /* GDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A06A1C422479E6900F42895 /* GDTextField.swift */; };
-		2A08E2B82230BAE900A7B3C0 /* NewItemPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A08E2B72230BAE900A7B3C0 /* NewItemPopup.swift */; };
+		2A08E2B82230BAE900A7B3C0 /* GDNewItemPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A08E2B72230BAE900A7B3C0 /* GDNewItemPopup.swift */; };
 		2A248408222D3AE10054E069 /* protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A248407222D3AE10054E069 /* protocol.swift */; };
 		2A6818F422184CDE00197B8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6818F322184CDE00197B8D /* AppDelegate.swift */; };
 		2A6818F622184CDE00197B8D /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6818F522184CDE00197B8D /* WelcomeController.swift */; };
@@ -27,7 +27,7 @@
 
 /* Begin PBXFileReference section */
 		2A06A1C422479E6900F42895 /* GDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDTextField.swift; sourceTree = "<group>"; };
-		2A08E2B72230BAE900A7B3C0 /* NewItemPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemPopup.swift; sourceTree = "<group>"; };
+		2A08E2B72230BAE900A7B3C0 /* GDNewItemPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDNewItemPopup.swift; sourceTree = "<group>"; };
 		2A248407222D3AE10054E069 /* protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocol.swift; sourceTree = "<group>"; };
 		2A6818F022184CDE00197B8D /* GetItDone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetItDone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A6818F322184CDE00197B8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 				2AE4643B221AE371004CB539 /* GDGradient.swift */,
 				2A9D6103221CDB4C0032E2B6 /* GDLabel.swift */,
 				2AE0686222240B640022C243 /* GDButton.swift */,
-				2A08E2B72230BAE900A7B3C0 /* NewItemPopup.swift */,
+				2A08E2B72230BAE900A7B3C0 /* GDNewItemPopup.swift */,
 				2A06A1C422479E6900F42895 /* GDTextField.swift */,
 			);
 			path = custom;
@@ -207,7 +207,7 @@
 				2A6818FC22184CDE00197B8D /* GetItDone.xcdatamodeld in Sources */,
 				2AE4643F221AE652004CB539 /* extension.swift in Sources */,
 				2A06A1C522479E6900F42895 /* GDTextField.swift in Sources */,
-				2A08E2B82230BAE900A7B3C0 /* NewItemPopup.swift in Sources */,
+				2A08E2B82230BAE900A7B3C0 /* GDNewItemPopup.swift in Sources */,
 				2A9F4DDD2225605700916B8F /* GDHeader.swift in Sources */,
 				2ADD802F22262BFA00236647 /* optionset.swift in Sources */,
 				2A248408222D3AE10054E069 /* protocol.swift in Sources */,

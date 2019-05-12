@@ -9,5 +9,9 @@
 import Foundation
 
 protocol GDHeaderDelegate {
-    func addItem()
+    func openAddItemPopup()
+}
+
+protocol GDNewItemDelegate {
+    func addItemToList()
 }
