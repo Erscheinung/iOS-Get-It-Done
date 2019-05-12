@@ -16,8 +16,8 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
         print("trying to open add item popup view")
     }
     
-    func addItemToList() {
-
+    func addItemToList(text:String) {
+        print("Text: \(text)")
     }
     
     

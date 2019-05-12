@@ -13,5 +13,5 @@ protocol GDHeaderDelegate {
 }
 
 protocol GDNewItemDelegate {
-    func addItemToList()
+    func addItemToList(text:String)
 }

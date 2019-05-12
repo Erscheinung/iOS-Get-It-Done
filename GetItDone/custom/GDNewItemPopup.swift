@@ -21,8 +21,8 @@ class GDNewItemPopup:GDGradient {
     }
     
     @objc func handleAdd() {
-        if let delegate = self.delegate {
-            delegate.addItemToList()
+        if let delegate = self.delegate, let textFieldText = self.textField.text {
+            delegate.addItemToList(text: textFieldText)
         }
     }
     
