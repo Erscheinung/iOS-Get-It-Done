@@ -33,7 +33,7 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
     let listTable = GDTableView()
     let CELL_ID = "cell_id"
     
-    var listData = ["Se","No","..."]
+    var listData:[ToDo] = [ToDo]()
     
     var keyboardHeight:CGFloat = 333
     
@@ -51,6 +51,12 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        listData = [
+            ToDo(id: 0, title: "first item", status: false),
+            ToDo(id: 1, title: "second item", status: false),
+            ToDo(id: 2, title: "third item", status: false)
+        ]
         
         view.backgroundColor = .white
         
@@ -84,7 +90,7 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
         header.delegate = self
         listTable.delegate = self
         listTable.dataSource = self
-        listTable.register(UITableViewCell.self, forCellReuseIdentifier: CELL_ID)
+        listTable.register(GDListCell.self, forCellReuseIdentifier: CELL_ID)
     }
 }
 
@@ -106,13 +112,14 @@ extension ListController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->
         UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath)
-            cell.textLabel?.text = self.listData[indexPath.row]
-            cell.selectionStyle = .none
-            cell.backgroundColor = .white
-            cell.textLabel?.textColor = .grayZero
+            let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath) as! GDListCell
+//            cell.textLabel?.text = self.listData[indexPath.row].title
+            cell.toDo = self.listData[indexPath.row]
             return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 40 //row size : total = 40 - 8
+    }
     
 }
