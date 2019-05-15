@@ -119,7 +119,7 @@ extension ListController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 40 //row size : total = 40 - 8
+        return 44 //row size : total = 40 - 8
     }
     
 }
