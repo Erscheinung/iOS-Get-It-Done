@@ -18,6 +18,8 @@ class GDListCell:UITableViewCell {
         return view
     }()
     
+    let box = GDCheckbox()
+    
     var toDo:ToDo? {
         didSet {
             if let toDo = toDo {
@@ -44,9 +46,18 @@ class GDListCell:UITableViewCell {
         
         view.addSubview(textField)
         view.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        view.topAnchor.constraint(equalTo: topAnchor, constant: 3).isActive = true
-        view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -3).isActive = true
+        view.topAnchor.constraint(equalTo: topAnchor, constant: 6).isActive = true
+        view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -6).isActive = true
         view.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        
+        addSubview(box)
+        box.rightAnchor.constraint(equalTo: rightAnchor, constant: -14).isActive = true
+//        box.topAnchor.constraint(equalTo: topAnchor, constant: 6).isActive = true
+//        box.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -6).isActive = true //40-6 = 30 pixels high
+        box.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        box.widthAnchor.constraint(equalToConstant: 22).isActive = true
+        box.heightAnchor.constraint(equalTo: box.widthAnchor).isActive = true
+        
     }
     
     required init?(coder aDecoder: NSCoder) {

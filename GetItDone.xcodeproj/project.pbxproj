@@ -26,6 +26,7 @@
 		2AE06865222412200022C243 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE06864222412200022C243 /* ListController.swift */; };
 		2AE4643C221AE371004CB539 /* GDGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4643B221AE371004CB539 /* GDGradient.swift */; };
 		2AE4643F221AE652004CB539 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4643E221AE652004CB539 /* extension.swift */; };
+		2AFB7902229B0CEA00580BA2 /* GDCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFB7901229B0CEA00580BA2 /* GDCheckBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		2AE06864222412200022C243 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		2AE4643B221AE371004CB539 /* GDGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDGradient.swift; sourceTree = "<group>"; };
 		2AE4643E221AE652004CB539 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		2AFB7901229B0CEA00580BA2 /* GDCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDCheckBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				2A06A1C422479E6900F42895 /* GDTextField.swift */,
 				2A1DFED32288036D00DC943B /* GDTableView.swift */,
 				2A1DFED522880B7C00DC943B /* GDListCell.swift */,
+				2AFB7901229B0CEA00580BA2 /* GDCheckBox.swift */,
 			);
 			path = custom;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				2AE4643C221AE371004CB539 /* GDGradient.swift in Sources */,
 				2AE0686322240B640022C243 /* GDButton.swift in Sources */,
 				2A9D6104221CDB4C0032E2B6 /* GDLabel.swift in Sources */,
+				2AFB7902229B0CEA00580BA2 /* GDCheckBox.swift in Sources */,
 				2A6818F622184CDE00197B8D /* WelcomeController.swift in Sources */,
 				2A6818FC22184CDE00197B8D /* GetItDone.xcdatamodeld in Sources */,
 				2AE4643F221AE652004CB539 /* extension.swift in Sources */,
