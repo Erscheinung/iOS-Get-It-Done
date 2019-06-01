@@ -46,7 +46,7 @@ class GDListCell:UITableViewCell {
         
         view.addSubview(textField)
         view.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        view.topAnchor.constraint(equalTo: topAnchor, constant: 6).isActive = true
+        view.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
         view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -6).isActive = true
         view.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         
