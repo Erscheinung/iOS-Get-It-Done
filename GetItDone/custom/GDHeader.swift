@@ -14,7 +14,7 @@ class GDHeaderView:UIView {
     let bg = GDGradient()
     let titleLabel = GDLabel(size: 14)
     let subtitleLabel = GDLabel(size: 24)
-    let addButton = GDButton(title: "+", type: .squareIcon)
+    let addButton = GDButton(type: .squareIcon)
     var delegate:GDHeaderDelegate?
     
     init(frame: CGRect = .zero, title:String = "header title", subtitle:String = "header subtitle") {

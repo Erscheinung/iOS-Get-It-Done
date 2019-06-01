@@ -16,9 +16,11 @@ class GDCheckbox:UIButton {
                 UIView.animate(withDuration: 0.2){
                     if toggled {
                         self.backgroundColor = .green
+                        self.setImage(UIImage(named: "done-icon"), for: .normal)
                     }
                     else {
                         self.backgroundColor = .clear
+                        self.setImage(UIImage(), for: .normal)
                     }
                 }
             }
