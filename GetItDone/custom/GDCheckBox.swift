@@ -10,6 +10,8 @@ import UIKit
 
 class GDCheckbox:UIButton {
     
+    var delegate:GDListCellDelegate?
+    
     var toggled:Bool? {
         didSet {
             if let toggled = toggled {
@@ -28,8 +30,9 @@ class GDCheckbox:UIButton {
     }
     
     @objc func toggleStatus() {
-        if let status = toggled {
+        if let status = toggled, let delegate = self.delegate {
             toggled = !status
+            delegate.toggleToDo(status: !status)
         }
     }
     
