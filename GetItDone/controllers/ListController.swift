@@ -149,8 +149,17 @@ extension ListController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->
         UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath) as! GDListCell
-//            cell.textLabel?.text = self.listData[indexPath.row].title
-            cell.toDo = self.listData[indexPath.row]
+            
+            var itemsForSection:[ToDo] = []
+            self.listData.forEach{ (toDo) in
+                if indexPath.section == 0 && !toDo.status {
+                    itemsForSection.append(toDo)
+                } else if (indexPath.section == 1 && toDo.status) {
+                    itemsForSection.append(toDo)
+                }
+            }
+            
+            cell.toDo = itemsForSection[indexPath.row]
             return cell
     }
     
