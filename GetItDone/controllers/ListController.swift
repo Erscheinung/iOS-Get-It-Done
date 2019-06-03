@@ -107,8 +107,19 @@ extension ListController: UITextFieldDelegate {
 
 extension ListController: UITableViewDelegate, UITableViewDataSource, GDListCellDelegate {
     
-    func toggleToDo(status: Bool) {
-        print("Tring to toggle todo in DB")
+    func toggleToDo(id:Int, status: Bool) {
+        //print("Tring to toggle todo in DB")
+        //print(id,status)
+        let newListData = self.listData.map{ (toDo) -> ToDo in
+            if(toDo.id == id) {
+                var newToDo = toDo
+                newToDo.status = status
+                return newToDo
+            }
+            return toDo
+        }
+        self.listData = newListData
+        self.listTable.reloadData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
