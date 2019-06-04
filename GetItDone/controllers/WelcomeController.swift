@@ -40,6 +40,10 @@ class WelcomeController: UIViewController {
         }
     }
     
+    func updateHeaderItemsLeft() {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
