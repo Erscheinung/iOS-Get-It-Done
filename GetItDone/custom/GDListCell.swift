@@ -10,6 +10,15 @@ import UIKit
 
 class GDListCell:UITableViewCell {
     
+    var delegate:GDListCellDelegate?
+    
+    @objc func toggleStatus() {
+        if let delegate = self.delegate, let toDo = self.toDo {
+            let newToDo = ToDo(id: toDo.id, title: textField.text!, status: !toDo.status)
+            delegate.toggleToDo(toDo: newToDo)
+        }
+    }
+    
     //let titleLabel = GDLabel(color: .grayZero, size: 16)
     let textField = GDTextField(placeholder: "ToDo", radius: 0, inset: 14)
     let view:UIView = {
@@ -32,6 +41,9 @@ class GDListCell:UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        box.addTarget(self, action: #selector(self.toggleStatus), for: .touchUpInside)
+
         
         selectionStyle = .none
         backgroundColor = .clear
