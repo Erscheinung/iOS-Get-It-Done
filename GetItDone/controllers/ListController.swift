@@ -17,8 +17,26 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
         popup.animatePopup()
     }
     
+    func notInList(text:String) -> Bool {
+        var isNotInList = true
+        self.listData.forEach{ (toDo) in
+            if toDo.title == text {
+                isNotInList = false
+            }
+        }
+        return isNotInList
+    }
+    
     func addItemToList(text:String) {
-        print("Text: \(text)")
+//        print("Text: \(text)")
+        if (notInList(text:text)) {
+            let newItem = ToDo(id: self.listData.count, title: text, status: false)
+            self.listData.append(newItem)
+            self.listTable.reloadData()
+            self.updateHeaderItemsLeft()
+            self.popup.textField.text = ""
+            self.popup.animatePopup()
+        }
     }
     
     
@@ -139,9 +157,7 @@ extension ListController: UITableViewDelegate, UITableViewDataSource, GDListCell
             }
             return oldToDo
         }
-        self.listData = newListData
-        self.listTable.reloadData()
-        self.updateHeaderItemsLeft()
+       
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

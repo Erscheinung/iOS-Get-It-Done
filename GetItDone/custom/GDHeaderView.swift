@@ -58,6 +58,8 @@ class GDHeaderView:UIView {
         addButton.widthAnchor.constraint(equalTo: addButton.heightAnchor, multiplier: 1).isActive = true
         
         addButton.addTarget(self, action: #selector(self.handleAddButton), for: .touchUpInside)
+        
+//        addButton.addTarget(self, action: #selector(self.handleAddButton2), for: UIControl.Event.primaryActionTriggered)
     }
     
     @objc func handleAddButton() {
@@ -65,6 +67,10 @@ class GDHeaderView:UIView {
             delegate.openAddItemPopup()
         }
     }
+    
+//    @objc func handleAddButton2() {
+//        delegate?.openAddItemPopup()
+//    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
