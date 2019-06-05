@@ -18,6 +18,19 @@ class GDNewItemPopup:GDGradient {
     
     @objc func handleCancel() {
         textField.resignFirstResponder()
+        animatePopup()
+    }
+    
+    var popupLocation:CGFloat = 70
+    
+    @objc func animatePopup() {
+        //        print("trying to open add item popup view")
+        self.animateView(transform: CGAffineTransform(translationX: 0, y: popupLocation), duration: 0.3)
+        if(popupLocation == 70){
+            popupLocation = 0
+        } else {
+            popupLocation = 70
+        }
     }
     
     @objc func handleAdd() {
@@ -28,6 +41,8 @@ class GDNewItemPopup:GDGradient {
     
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
+        
+        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animatePopup)))
         
         let inset:CGFloat = 12
         
