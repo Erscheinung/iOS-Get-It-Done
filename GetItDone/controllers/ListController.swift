@@ -82,9 +82,9 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
         super.viewDidLoad()
         
         listData = [
-            ToDo(id: 0, title: "first item", status: false),
-            ToDo(id: 1, title: "second item", status: true),
-            ToDo(id: 2, title: "third item", status: true)
+//            ToDo(id: 0, title: "first item", status: false),
+//            ToDo(id: 1, title: "second item", status: true),
+//            ToDo(id: 2, title: "third item", status: true)
         ]
         
         self.updateHeaderItemsLeft()
@@ -135,12 +135,26 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
 }
 
 extension ListController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        self.bgBottom.constant = -keyboardHeight - 100
+        
+        var heightToAnimate = -keyboardHeight - 20
+        
+        if textField == popup.textField {
+            popup.animateView(transform: CGAffineTransform(translationX: 0, y: -self.keyboardHeight), duration: 0.5)
+            heightToAnimate -= 80
+        }
+        
+        self.bgBottom.constant = heightToAnimate
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }
-        popup.animateView(transform: CGAffineTransform(translationX: 0, y: -self.keyboardHeight), duration: 0.5)
+        
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -148,7 +162,12 @@ extension ListController: UITextFieldDelegate {
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }
-        popup.animateView(transform: CGAffineTransform(translationX: 0, y: 0), duration: 0.6)
+        if textField == popup.textField {
+            popup.animateView(transform: CGAffineTransform(translationX: 0, y: 0), duration: 0.6)
+            
+        } else {
+            
+        }
     }
 }
 
