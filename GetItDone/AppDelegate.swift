@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         let wc = WelcomeController()
+        
+        
       //  print("did finish launching with options")
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()

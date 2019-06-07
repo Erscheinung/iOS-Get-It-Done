@@ -22,14 +22,10 @@ struct CoreDataManager {
         return container
     }()
     
-    func createToDo() {
+    func createToDo(id: Double, title:String, status:Bool) {
         let context = persistentContainer.viewContext
         let toDo = NSEntityDescription.insertNewObject(forEntityName: "ToDo", into: context)
-        
-        let id = 1
-        let title = "LOL"
-        let status = false
-        
+
         toDo.setValue(id, forKey: "id")
         toDo.setValue(title, forKey: "title")
         toDo.setValue(status, forKey: "status")
@@ -37,7 +33,21 @@ struct CoreDataManager {
         do {
             try context.save()
         } catch let err {
-            print("failed to save toDo into context:",err)
+            print("failed to save context with new toDo:",err)
+        }
+    }
+    
+    func fetchToDos() -> [ToDo] {
+        let context = persistentContainer.viewContext
+
+        let fetchRequest = NSFetchRequest<ToDo>(entityName: "ToDo")
+
+        do {
+            let toDos = try context.fetch(fetchRequest)
+            return toDos
+        } catch let err {
+            print("failed to fetch todos from context",err)
+            return []
         }
     }
     

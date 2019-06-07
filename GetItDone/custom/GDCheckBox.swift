@@ -10,8 +10,6 @@ import UIKit
 
 class GDCheckbox:UIButton {
     
-    var id:Int?
-    
     var toggled:Bool? {
         didSet {
             if let toggled = toggled {
@@ -35,7 +33,6 @@ class GDCheckbox:UIButton {
             
         layer.borderWidth = 1
         layer.borderColor = UIColor.grayZero.cgColor
-        
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -30,8 +30,8 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
     func addItemToList(text:String) {
 //        print("Text: \(text)")
         if (notInList(text:text)) {
-            let newItem = ToDo(id: self.listData.count, title: text, status: false)
-            self.listData.append(newItem)
+//            let newItem = ToDo(id: self.listData.count, title: text, status: false)
+//            self.listData.append(newItem)
             self.listTable.reloadData()
             self.updateHeaderItemsLeft()
             self.popup.textField.text = ""
@@ -81,11 +81,7 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        listData = [
-//            ToDo(id: 0, title: "first item", status: false),
-//            ToDo(id: 1, title: "second item", status: true),
-//            ToDo(id: 2, title: "third item", status: true)
-        ]
+        listData = CoreDataManager.shared.fetchToDos()
         
         self.updateHeaderItemsLeft()
         
@@ -174,19 +170,21 @@ extension ListController: UITextFieldDelegate {
 
 extension ListController: UITableViewDelegate, UITableViewDataSource, GDListCellDelegate {
     
-    func toggleToDo(toDo updatedToDo:ToDo) {
+    func toggleToDo() {
         //print("Tring to toggle todo in DB")
         //print(id,status)
-        let newListData = self.listData.map{ (oldToDo) -> ToDo in
-            if(oldToDo.id == updatedToDo.id) {
-                var newToDo = oldToDo
-                newToDo.status = updatedToDo.status
-                newToDo.title = updatedToDo.title
-                return newToDo
-            }
-            return oldToDo
-        }
-       
+//        let newListData = self.listData.map{ (oldToDo) -> ToDo in
+//            if(oldToDo.id == updatedToDo.id) {
+//                var newToDo = oldToDo
+//                newToDo.status = updatedToDo.status
+//                newToDo.title = updatedToDo.title
+//                return newToDo
+//            }
+//            return oldToDo
+//        }
+        self.listData = CoreDataManager.shared.fetchToDos()
+        self.listTable.reloadData()
+        self.updateHeaderItemsLeft()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
