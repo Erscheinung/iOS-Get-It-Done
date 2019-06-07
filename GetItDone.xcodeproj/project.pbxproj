@@ -27,6 +27,7 @@
 		2AE4643C221AE371004CB539 /* GDGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4643B221AE371004CB539 /* GDGradient.swift */; };
 		2AE4643F221AE652004CB539 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4643E221AE652004CB539 /* extension.swift */; };
 		2AFB7902229B0CEA00580BA2 /* GDCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFB7901229B0CEA00580BA2 /* GDCheckBox.swift */; };
+		2AFDF82E22AAB4C900E7AE0F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFDF82D22AAB4C900E7AE0F /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		2AE4643B221AE371004CB539 /* GDGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDGradient.swift; sourceTree = "<group>"; };
 		2AE4643E221AE652004CB539 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		2AFB7901229B0CEA00580BA2 /* GDCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDCheckBox.swift; sourceTree = "<group>"; };
+		2AFDF82D22AAB4C900E7AE0F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				2A6818FF22184CE000197B8D /* LaunchScreen.storyboard */,
 				2A68190222184CE000197B8D /* Info.plist */,
 				2A6818FA22184CDE00197B8D /* GetItDone.xcdatamodeld */,
+				2AFDF82D22AAB4C900E7AE0F /* CoreDataManager.swift */,
 			);
 			path = GetItDone;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				2AFB7902229B0CEA00580BA2 /* GDCheckBox.swift in Sources */,
 				2A6818F622184CDE00197B8D /* WelcomeController.swift in Sources */,
 				2A6818FC22184CDE00197B8D /* GetItDone.xcdatamodeld in Sources */,
+				2AFDF82E22AAB4C900E7AE0F /* CoreDataManager.swift in Sources */,
 				2AE4643F221AE652004CB539 /* extension.swift in Sources */,
 				2A06A1C522479E6900F42895 /* GDTextField.swift in Sources */,
 				2A08E2B82230BAE900A7B3C0 /* GDNewItemPopup.swift in Sources */,
