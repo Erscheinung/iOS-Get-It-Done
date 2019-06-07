@@ -22,13 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("family \(family), font names: \(names)")
         }
         
-        let wc = WelcomeController()
+        let hasVisitedWelcomeController = UserDefaults.standard.bool(forKey: "welcome-controller-visited")
+        let initialController = hasVisitedWelcomeController ? ListController() : WelcomeController()
         
         
       //  print("did finish launching with options")
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        window?.rootViewController = wc
+        window?.rootViewController = initialController
         return true
     }
 

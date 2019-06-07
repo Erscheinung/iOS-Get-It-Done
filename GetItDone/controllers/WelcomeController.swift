@@ -47,6 +47,8 @@ class WelcomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        UserDefaults.standard.set(true, forKey: "welcome-controller-visited")
+        
         nextButton.addTarget(self, action: #selector(self.handleNext), for: [.touchUpInside, .touchUpOutside])
         
         view.backgroundColor = .white
