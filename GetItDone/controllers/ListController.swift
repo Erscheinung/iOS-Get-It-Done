@@ -128,6 +128,8 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
         return .lightContent
     }
     
+    var toDoUpdate:ToDo?
+    
 }
 
 extension ListController: UITextFieldDelegate {
@@ -144,6 +146,8 @@ extension ListController: UITextFieldDelegate {
         if textField == popup.textField {
             popup.animateView(transform: CGAffineTransform(translationX: 0, y: -self.keyboardHeight), duration: 0.5)
             heightToAnimate -= 80
+        } else {
+            self.toDoUpdate = CoreDataManager.shared.fetchToDo(title: textField.text!)
         }
         
         self.bgBottom.constant = heightToAnimate
@@ -162,7 +166,10 @@ extension ListController: UITextFieldDelegate {
             popup.animateView(transform: CGAffineTransform(translationX: 0, y: 0), duration: 0.6)
             
         } else {
-            
+            if let toDoUpdate = self.toDoUpdate {
+                CoreDataManager.shared.deleteToDo(id: toDoUpdate.id)
+                CoreDataManager.shared.createToDo(id: toDoUpdate.id, title: textField.text!, status: toDoUpdate.status)
+            }
         }
     }
 }
