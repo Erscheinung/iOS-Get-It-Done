@@ -32,6 +32,8 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
         if (notInList(text:text)) {
 //            let newItem = ToDo(id: self.listData.count, title: text, status: false)
 //            self.listData.append(newItem)
+            CoreDataManager.shared.createToDo(id: Double(self.listData.count), title: text, status: false)
+            self.listData = CoreDataManager.shared.fetchToDos()
             self.listTable.reloadData()
             self.updateHeaderItemsLeft()
             self.popup.textField.text = ""
@@ -178,17 +180,6 @@ extension ListController: UITextFieldDelegate {
 extension ListController: UITableViewDelegate, UITableViewDataSource, GDListCellDelegate {
     
     func toggleToDo() {
-        //print("Tring to toggle todo in DB")
-        //print(id,status)
-//        let newListData = self.listData.map{ (oldToDo) -> ToDo in
-//            if(oldToDo.id == updatedToDo.id) {
-//                var newToDo = oldToDo
-//                newToDo.status = updatedToDo.status
-//                newToDo.title = updatedToDo.title
-//                return newToDo
-//            }
-//            return oldToDo
-//        }
         self.listData = CoreDataManager.shared.fetchToDos()
         self.listTable.reloadData()
         self.updateHeaderItemsLeft()
