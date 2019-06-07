@@ -37,6 +37,23 @@ struct CoreDataManager {
         }
     }
     
+    func deleteToDo(id:Double) {
+        let context = persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<ToDo>(entityName: "ToDo")
+        
+        do {
+            let toDos = try context.fetch(fetchRequest)
+            toDos.forEach { (fetchedToDo) in
+                if fetchedToDo.id == id {
+                    context.delete(fetchedToDo)
+                }
+            }
+        } catch let err {
+            print("failed to fetch or delete todo from context",err)
+        }
+    }
+    
     func fetchToDos() -> [ToDo] {
         let context = persistentContainer.viewContext
 
